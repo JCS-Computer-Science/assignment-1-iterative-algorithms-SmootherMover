@@ -1,4 +1,11 @@
+const numberSet = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 function binarySearch(array, searchTerm) {
+
+	let middleIndex = Math.floor(array.length/2);
+	
+	if 
+
 	/*
 	 ** Check the middle element, if it's higher than the searchTerm
 	 ** then check the element in between the start and the middle, otherwise
@@ -10,5 +17,8 @@ function binarySearch(array, searchTerm) {
 
 	return null;
 }
+
+binarySearch(numberSet, 9);
+
 
 module.exports = binarySearch;
