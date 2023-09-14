@@ -17,6 +17,6 @@ function linearSearch(array, searchTerm) {
 
 }
 
-console.log(linearSearch(numberSet, 15));
+console.log(linearSearch(numberSet, 2));
 
 module.exports = linearSearch;
