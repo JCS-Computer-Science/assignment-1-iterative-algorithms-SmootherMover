@@ -3,26 +3,26 @@ const numberSet = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 function binarySearch(array, searchTerm) {
 	
 	let arrayStart = 0;
-	let arrayEnd = array.length + 1	; 
-	let termLocation; 
+	let arrayEnd = array.length - 1	; 
 
 	while(arrayStart <= arrayEnd){ 
 		
 		let middleTerm  = Math.floor((arrayStart + arrayEnd)/2);
-		console.log(middleTerm);
+	
 		if(array[middleTerm] == searchTerm ){
-			termLocation = arrayEnd;
-			return true;
-		}else if(searchTerm > middleTerm){
-			arrayStart = middleTerm + 1;
-			console.log("y");
-		}else{
+
+			return middleTerm;
+
+		}else if(array[middleTerm] >searchTerm ){
+
 			arrayEnd = middleTerm - 1;
-			console.log("x");
+		
+		}else{
+
+			arrayStart = middleTerm + 1;
+		
 		}
 
-	termLocation = arrayEnd;
-	
 	}
 	
 	/*
@@ -33,11 +33,11 @@ function binarySearch(array, searchTerm) {
 	 ** repeat the above process for the subset of the array
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
+
 	
-	console.log(termLocation);
 }
 
 
-binarySearch(numberSet, 9);
+binarySearch(numberSet, 2);
 
 module.exports = binarySearch;
