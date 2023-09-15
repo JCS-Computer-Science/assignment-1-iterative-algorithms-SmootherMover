@@ -1,9 +1,21 @@
-let numberSet = [2, 3, 7, 8, 9, 11, 99];
+let numberSet = [7, 3, 1, 9, 5, 99, 100, 42, 1230, 23];
 
 function insertionSort(array) {
 
-	for (let  i = 0;   < array.length;  ++) {
-		const element = array[ ];
+	const swapElements = (array, index1, index2) => {
+		let temp = array[index1];
+		array[index1] = array[index2];
+		array[index2] = temp;
+	};
+
+	for(let  i = 0;  i < array.length;  i++){
+		
+		if(array[i] > array[i+1]){
+
+			swapElements(array, i+1, i);
+			console.log(array);
+		}
+
 		
 	}
 	/*
@@ -14,5 +26,8 @@ function insertionSort(array) {
 
 	return array;
 }
+
+console.log(insertionSort(numberSet));
+
 
 module.exports = insertionSort;
