@@ -1,4 +1,4 @@
-let numberSet = [7, 3, 1, 9, 5, 99, 100, 42, 1230, 23];
+let numberSet = [7, 3, 1, 9, 5, 99, 100, 42, 1230, 23, 0];
 
 function insertionSort(array) {
 
@@ -13,10 +13,21 @@ function insertionSort(array) {
 		if(array[i] > array[i+1]){
 
 			swapElements(array, i+1, i);
-			console.log(array);
+			
 		}
 
+		for(let  i = 0;  i < array.length;  i++){
 		
+			if(array[i] > array[i+1]){
+	
+				swapElements(array, i+1, i);
+				
+			}
+	
+			
+		}
+
+		 
 	}
 	/*
 	 ** For each element in the array, swap it with the element
