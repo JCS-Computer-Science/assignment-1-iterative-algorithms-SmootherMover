@@ -1,28 +1,17 @@
-let numberSet = [7, 3, 1, 9, 5, 99, 100, 42, 1230, 23, 0, -99];
+let numberSet = [7, 3, 1, 9, 5, 99, 100, 42, 1230, 23];
 
 function selectionSort(array){
-	
-	let dummyArray = array;
-	let min = array[0];
 
-	for (let i = 0; i < array.length; i++) {
+	let temporary;
+	let cut;
 
-		if(array[i] < min){
-			min = array[i];
-		}
-	
-	
+	for (let i = 0; i < array.length; i++){
+		let min = Math.min(...array.slice(i));
+		cut = array.indexOf(min, i);
+		temporary = array[i];
+		array[i] = min;
+		array[cut] = temporary;
 	}	
-
-	for (let j = 0; j < array.length; j++) {
-
-
-		let index = array.indexOf(min);
-		array.splice(index, 1);
-		array.unshift(min);
-
-	}
-		
 	
 	/*
 	 ** Search through the whole array for the smallest element
